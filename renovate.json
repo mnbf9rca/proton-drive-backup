@@ -94,7 +94,7 @@
         "/^\\.github/workflows/.+\\.ya?ml$/"
       ],
       "matchStrings": [
-        "cosign-release: [\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
+        "\\s+cosign-release: [\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
       ],
       "depNameTemplate": "sigstore/cosign",
       "datasourceTemplate": "github-releases",
@@ -107,7 +107,7 @@
         "/^\\.github/workflows/.+\\.ya?ml$/"
       ],
       "matchStrings": [
-        "version: [\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
+        "\\s+version: [\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
       ],
       "depNameTemplate": "aquasecurity/trivy",
       "datasourceTemplate": "github-releases",
