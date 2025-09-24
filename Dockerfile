@@ -129,7 +129,6 @@ LABEL org.opencontainers.image.title="Proton Drive Backup" \
       org.opencontainers.image.revision="${VCS_REF}" \
       org.opencontainers.image.vendor="Personal Project" \
       org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.source="https://github.com/mnbf9rca/proton-drive-backup" \
       org.opencontainers.image.base.name="alpine:3.22.1" \
       com.example.rclone.version="1.71.0" \
       com.example.kopia.version="0.21.1"
