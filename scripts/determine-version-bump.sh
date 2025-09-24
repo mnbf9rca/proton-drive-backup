@@ -100,7 +100,7 @@ extract_version_changes() {
 
 # Main execution
 main() {
-    local dockerfile="${1:-proton-drive-backup/Dockerfile}"
+    local dockerfile="${1:-Dockerfile}"
 
     if [[ ! -f "$dockerfile" ]]; then
         echo "Error: Dockerfile not found at $dockerfile" >&2

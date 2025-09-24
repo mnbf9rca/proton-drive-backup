@@ -39,6 +39,8 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=pr-${{ github.event.number }}-${{ github.event.pull_request.head.sha }}
+          flavor: |
+            latest=false
 
       - name: Get current date
         id: date
@@ -99,7 +101,7 @@ jobs:
             **Image**: \`${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}\`
             **Digest**: \`${{ steps.build.outputs.digest }}\`
             **Platform**: linux/amd64
-            **Tags**: \`pr-${{ github.event.number }}\`, \`${{ github.event.pull_request.head.ref }}-${{ github.event.pull_request.head.sha }}\`
+            **Tags**: \`${{ steps.meta.outputs.tags }}\`
 
             ### Security Features
             - ✅ Container image built and pushed

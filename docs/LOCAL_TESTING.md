@@ -30,14 +30,14 @@ export LOCAL_PATH="/tmp/proton-backup-test"
 
 Run:
 ```bash
-./proton-drive-backup/scripts/rclone-sync.sh
+./scripts/rclone-sync.sh
 ```
 
 ## Docker Test
 
 ```bash
 # Build
-docker build -t proton-backup-test ./proton-drive-backup
+docker build -t proton-backup-test .
 
 # Run
 docker run --rm -it \
