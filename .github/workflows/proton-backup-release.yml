@@ -83,6 +83,14 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$SOURCE_TAG \
             --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
+          # Add version tag if a release was created
+          if [ "${{ steps.tag.outputs.new_tag }}" != "" ]; then
+            echo "Adding version tag: ${{ steps.tag.outputs.new_tag }}"
+            docker buildx imagetools create \
+              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$SOURCE_TAG \
+              --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.new_tag }}
+          fi
+
           # Add version tags from metadata
           IFS=',' read -ra TAGS <<< "${{ steps.meta.outputs.tags }}"
           for tag in "${TAGS[@]}"; do
