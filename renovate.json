@@ -90,8 +90,8 @@
     {
       "customType": "regex",
       "description": "Update Cosign version in GitHub Actions workflows",
-      "fileMatch": [
-        "^\\.github/workflows/.+\\.ya?ml$"
+      "managerFilePatterns": [
+        "/^\\.github/workflows/.+\\.ya?ml$/"
       ],
       "matchStrings": [
         "cosign-release: [\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
@@ -103,8 +103,8 @@
     {
       "customType": "regex",
       "description": "Update Trivy version in GitHub Actions workflows",
-      "fileMatch": [
-        "^\\.github/workflows/.+\\.ya?ml$"
+      "managerFilePatterns": [
+        "/^\\.github/workflows/.+\\.ya?ml$/"
       ],
       "matchStrings": [
         "version: [\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
@@ -116,8 +116,8 @@
     {
       "customType": "regex",
       "description": "Update rclone version in Dockerfile",
-      "fileMatch": [
-        "Dockerfile"
+      "managerFilePatterns": [
+        "/Dockerfile/"
       ],
       "matchStrings": [
         "ARG RCLONE_VERSION=(?<currentValue>.*?)\\n"
@@ -129,8 +129,8 @@
     {
       "customType": "regex",
       "description": "Update kopia version in Dockerfile",
-      "fileMatch": [
-        "Dockerfile"
+      "managerFilePatterns": [
+        "/Dockerfile/"
       ],
       "matchStrings": [
         "ARG KOPIA_VERSION=(?<currentValue>.*?)\\n"
