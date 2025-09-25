@@ -24,12 +24,6 @@
         "sigstore/cosign-installer",
         "aquasecurity/trivy-action"
       ],
-      "automerge": true,
-      "platformAutomerge": true,
-      "schedule": [
-        "at any time"
-      ],
-      "minimumReleaseAge": null,
       "labels": [
         "dependencies",
         "auto-merge",
@@ -54,12 +48,6 @@
       "matchFileNames": [
         "Dockerfile"
       ],
-      "automerge": true,
-      "platformAutomerge": true,
-      "schedule": [
-        "at any time"
-      ],
-      "minimumReleaseAge": null,
       "labels": [
         "dependencies",
         "auto-merge",
@@ -155,5 +143,11 @@
   "separateMinorPatch": true,
   "separateMajorMinor": true,
   "separateMultipleMajor": true,
-  "rangeStrategy": "pin"
+  "rangeStrategy": "pin",
+  "automerge": true,
+  "platformAutomerge": true,
+  "schedule": [
+    "at any time"
+  ],
+  "minimumReleaseAge": null
 }
