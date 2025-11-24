@@ -68,7 +68,7 @@ jobs:
           outputs: type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push=true
 
       - name: Install Cosign
-        uses: sigstore/cosign-installer@dbac2a8edec72ca001e3e9f3e53cd0b98f1eb467
+        uses: sigstore/cosign-installer@29bcfa8619aeb12eaac78d31157172c86183b05c
         with:
           cosign-release: "v2.6.1"
 
