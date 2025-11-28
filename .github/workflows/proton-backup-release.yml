@@ -106,7 +106,7 @@ jobs:
 
       - name: Upload Trivy scan results to GitHub Security
         if: always() && hashFiles('trivy-results.sarif') != ''
-        uses: github/codeql-action/upload-sarif@75b2f49aeaf4e8a9eab338ddc5d628eea7366eeb
+        uses: github/codeql-action/upload-sarif@ecec1f88769052ebc45aa0affc53ea30d474cffa
         with:
           sarif_file: trivy-results.sarif
           category: trivy-container-scan
