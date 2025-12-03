@@ -1,6 +1,6 @@
 # Multi-stage build for secure Proton Drive backup container
 # Stage 1: Download and verify binaries
-FROM alpine:3.22.2 AS builder
+FROM alpine:3.23.0 AS builder
 
 # Define versions for reproducible builds (checksums fetched dynamically)
 # Test comment to verify workflows trigger properly
@@ -83,7 +83,7 @@ RUN ARCH=$(uname -m) && \
     rm -rf kopia-*
 
 # Stage 2: Runtime image
-FROM alpine:3.22.2
+FROM alpine:3.23.0
 
 # Install only essential runtime dependencies
 RUN apk add --no-cache \
