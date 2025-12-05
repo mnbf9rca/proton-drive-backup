@@ -49,7 +49,7 @@ jobs:
 
     - name: Upload Trivy scan results to GitHub Security
       if: steps.latest-image.outputs.skip == 'false'
-      uses: github/codeql-action/upload-sarif@f5c63fadd50734aadb36128b8fd75caabc02a3dc 
+      uses: github/codeql-action/upload-sarif@149d184a5153ea45e6fbcef5588ac7b8c7af9835 
       with:
         sarif_file: trivy-results.sarif
 
