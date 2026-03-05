@@ -127,7 +127,7 @@ jobs:
 
       - name: Create GitHub release
         if: steps.version_bump.outputs.should_create_release == 'true'
-        uses: ncipollo/release-action@5b3313d377fe72ad0fcbe392024a07ccce1344a7
+        uses: ncipollo/release-action@c074b5e19fd155e5f9800d3c3284f1b6298aa41f
         with:
           tag: ${{ steps.tag.outputs.new_tag }}
           name: ${{ steps.tag.outputs.new_tag }}
