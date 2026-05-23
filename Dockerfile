@@ -4,7 +4,7 @@ FROM alpine:3.23.4 AS builder
 
 # Define versions for reproducible builds (checksums fetched dynamically)
 # Test comment to verify workflows trigger properly
-ARG RCLONE_VERSION=1.74.1
+ARG RCLONE_VERSION=1.74.2
 ARG KOPIA_VERSION=0.23.0
 
 WORKDIR /tmp
